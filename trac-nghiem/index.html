@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172d32">
+  <meta name="description" content="20 câu hỏi tình huống PCCC và CNCH dành cho học sinh THPT. Luyện tập, giải thích đáp án và thử thách kiến thức an toàn.">
+  <title>Phản xạ an toàn · Trắc nghiệm PCCC & CNCH</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="questions.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Đến nội dung</a>
+  <header class="topbar wrap">
+    <a class="brand" href="./" aria-label="Phản xạ an toàn – Trang chủ"><img src="icon.svg" width="38" height="38" alt=""><span>PHẢN XẠ <b>AN TOÀN</b><small>PCCC & CNCH · DÀNH CHO HỌC SINH THPT</small></span></a>
+    <a class="book-link" href="../">Đọc sổ tay <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section id="home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> HỌC KỸ NĂNG. GIỮ AN TOÀN.</p>
+          <h1>Bình tĩnh trước<br>mỗi <em>tình huống.</em></h1>
+          <p class="intro">Một lựa chọn đúng bắt đầu từ việc hiểu nguy cơ. Thử sức với những tình huống PCCC và cứu nạn, cứu hộ gần gũi với tuổi học trò.</p>
+          <div class="hero-stats"><span><b>20</b> tình huống</span><span><b>04</b> lựa chọn / câu</span><span><b>01</b> đáp án đúng</span></div>
+        </div>
+        <aside class="scenario-card" aria-label="Nguyên tắc xử lý an toàn">
+          <div class="card-head"><span>SỔ TAY PHẢN XẠ</span><span>01 — 03</span></div>
+          <div class="signal-art" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="signal-center">!</div><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span></div>
+          <ol class="principles"><li><span>01</span><div><b>Nhận diện nguy cơ</b><small>Quan sát trước khi hành động.</small></div></li><li><span>02</span><div><b>Ưu tiên an toàn</b><small>Giữ đường thoát cho chính mình.</small></div></li><li><span>03</span><div><b>Gọi đúng hỗ trợ</b><small>Báo rõ nơi xảy ra và người bị nạn.</small></div></li></ol>
+          <div class="card-foot">HIỂU ĐÚNG ĐỂ HÀNH ĐỘNG ĐÚNG <span>↗</span></div>
+        </aside>
+      </div>
+      <section class="setup" aria-labelledby="setup-title">
+        <div class="setup-heading"><p class="eyebrow">BẮT ĐẦU TỪ ĐÂY</p><h2 id="setup-title">Chọn cách bạn luyện tập</h2><p>Không giới hạn thời gian. Mỗi lượt là một cơ hội hiểu thêm.</p></div>
+        <fieldset class="mode-grid"><legend class="sr-only">Chế độ làm bài</legend>
+          <label class="mode-card"><input type="radio" name="mode" value="practice" checked><span class="mode-icon" aria-hidden="true">↗</span><span><b>Luyện tập</b><small>Xem giải thích sau từng câu. <br>Hiểu vì sao một lựa chọn nguy hiểm.</small></span><span class="radio-mark"></span></label>
+          <label class="mode-card"><input type="radio" name="mode" value="challenge"><span class="mode-icon" aria-hidden="true">◎</span><span><b>Thử thách</b><small>Tự quyết định đến hết lượt. <br>Xem điểm và giải thích khi hoàn thành.</small></span><span class="radio-mark"></span></label>
+        </fieldset>
+        <div class="setup-bottom"><div class="selects"><label>Bộ câu hỏi<select id="deck"><option value="all">Toàn bộ chủ đề</option><option value="1">Bộ 1 · Câu 01–10</option><option value="2">Bộ 2 · Câu 11–20</option></select></label><label>Số câu mỗi lượt<select id="count"><option value="10">10 câu ngẫu nhiên</option><option value="20">Đủ 20 câu</option></select></label></div><button id="start" class="btn primary">Bắt đầu luyện tập <span aria-hidden="true">→</span></button></div>
+        <p class="quiet">Câu hỏi và lựa chọn được đảo thứ tự. Kết quả tốt nhất chỉ lưu trên thiết bị này; không cần đăng nhập.</p>
+        <p id="best" class="best" hidden></p>
+      </section>
+      <section class="topics" aria-label="Các chủ đề"><span>CHỦ ĐỀ TRONG BÀI</span><div><span>Thoát nạn</span><span>Chữa cháy ban đầu</span><span>Điện & hóa chất</span><span>Sơ cứu</span><span>Cứu hộ an toàn</span></div></section>
+    </section>
+    <section id="quiz" class="quiz-shell" hidden aria-labelledby="question-title">
+      <div class="quiz-top"><button id="exit" class="text-btn">← Về trang đầu</button><span id="mode-label" class="badge"></span></div>
+      <div class="progress-meta"><span id="counter"></span><span id="answered"></span></div><div id="progress" class="progress" role="progressbar" aria-label="Tiến độ trả lời" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+      <div class="question-layout"><div class="question-main"><div class="question-kicker"><span id="topic" class="eyebrow"></span><span id="original" class="quiet"></span></div><h2 id="question-title" tabindex="-1"></h2><fieldset id="answers"><legend class="sr-only">Chọn một đáp án</legend></fieldset><div id="feedback" role="status" aria-live="polite" hidden></div><p id="question-error" class="error" role="alert" hidden>Hãy chọn một đáp án trước khi tiếp tục.</p><div class="quiz-actions"><button id="previous" class="btn secondary">← Câu trước</button><button id="check" class="btn primary">Kiểm tra đáp án <span aria-hidden="true">→</span></button><button id="next" class="btn primary" hidden>Câu tiếp theo <span aria-hidden="true">→</span></button></div></div><aside class="question-side"><span class="eyebrow">THÊM MỘT GÓC NHÌN</span><details id="hint"><summary>Cần một gợi ý?</summary><p id="hint-text"></p></details><p>Đọc kỹ điều kiện trong tình huống. Chọn hành động an toàn nhất với thông tin đã cho.</p><div class="side-number">114<small>BÁO CHÁY & CỨU NẠN, CỨU HỘ</small></div><div class="side-number">115<small>CẤP CỨU Y TẾ</small></div><small class="quiet">Chỉ gọi khi có sự cố thật. Không gọi thử trong buổi giao lưu.</small></aside></div>
+    </section>
+    <section id="result" class="result-shell" hidden aria-labelledby="result-title"><p class="eyebrow">MỖI LƯỢT LÀ MỘT BÀI HỌC</p><h1 id="result-title" tabindex="-1">Bạn đã hoàn thành!</h1><div class="result-summary"><div class="score-disc"><b id="score"></b><span id="score-total"></span></div><div><h2 id="result-message"></h2><p id="result-detail"></p><p id="result-best" class="quiet"></p></div></div><div class="result-actions"><button id="restart" class="btn primary">Làm lượt mới →</button><button id="review-wrong" class="btn secondary">Xem câu cần ôn</button><button id="review-all" class="btn secondary">Xem tất cả</button></div><div id="review-list"></div></section>
+    <details class="sources"><summary>Nguồn tham khảo & cách sử dụng</summary><p>Bộ câu hỏi tình huống phục vụ tuyên truyền cho học sinh THPT; cần kết hợp hướng dẫn và thực hành của cán bộ chuyên môn. Các tình huống được biên soạn từ hướng dẫn PCCC, an toàn và sơ cứu dưới đây. Trong sự cố thật, ưu tiên an toàn hiện trường và làm theo lực lượng cứu nạn, y tế.</p><div id="source-list"></div><p>Trang chấm điểm trên thiết bị, không thu tên, lớp hoặc gửi kết quả lên máy chủ.</p></details>
+    <noscript><p class="notice">Bạn cần bật JavaScript để làm bài trắc nghiệm. Bạn vẫn có thể <a href="../">đọc sổ tay PCCC & CNCH</a>.</p></noscript>
+  </main>
+  <footer class="wrap"><span>PHẢN XẠ AN TOÀN <i>·</i> Học hôm nay, chủ động ngày mai.</span><a href="../">Sổ tay PCCC & CNCH ↗</a></footer>
+  <dialog id="exit-dialog"><h2>Kết thúc lượt đang làm?</h2><p>Các câu trả lời của lượt này sẽ không được giữ lại.</p><div class="dialog-actions"><button id="cancel-exit" class="btn secondary">Tiếp tục làm</button><button id="confirm-exit" class="btn primary">Về trang đầu</button></div></dialog>
+</body>
+</html>
