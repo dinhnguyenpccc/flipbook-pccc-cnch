@@ -14,7 +14,7 @@
     return true;
   }
   function makeSession(bank, deck, count, rng = Math.random) {
-    return shuffle(bank.filter(q => deck === 'all' || String(q.deck) === String(deck)), rng).slice(0, count).map(q => ({ ...q, options: shuffle(q.options.map((o, i) => ({...o, correct: i === q.correct})), rng), choice: null, checked: false }));
+    return shuffle(bank.filter(q => deck === 'all' || String(q.deck) === String(deck)), rng).slice(0, count).map(q => ({ ...q, options: shuffle(q.options.map((o, i) => ({...o, value:i, correct: i === q.correct})), rng), choice: null, checked: false }));
   }
   function score(session) { return session.filter(q => q.choice !== null && q.options[q.choice].correct).length; }
   const api = { shuffle, validate, makeSession, score };
